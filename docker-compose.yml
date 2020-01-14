@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  aws-training:
+    image: ${DOCKER_REGISTRY-}awstraining
+    build:
+      context: .
+      dockerfile: AWS-Training/Dockerfile
