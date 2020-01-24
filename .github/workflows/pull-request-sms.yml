@@ -9,7 +9,7 @@ name: Pull Request SMS
 on: [pull_request]
 
 jobs:
-  label:
+  sms:
 
     runs-on: ubuntu-latest
 
