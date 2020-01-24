@@ -1,0 +1,20 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+#
+# To use this workflow, you will need to set up a .github/labeler.yml
+# file with configuration.  For more information, see:
+# https://github.com/actions/labeler/blob/master/README.md
+
+name: Pull Request SMS
+on: [pull_request]
+
+jobs:
+  label:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: https://api.46elks.com/a1/sms -u ${{secrets.46ELKS_API_USERNAME}}:${{secrets.46ELKS_API_PASSWORD}} -d from=AWS-Training -d to=+46760589799 -d message="There's a new pull request!"
