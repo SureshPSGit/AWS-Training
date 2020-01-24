@@ -5,8 +5,8 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler/blob/master/README.md
 
-name: Pull Request SMS
-on: [pull_request]
+name: Push Request SMS
+on: [push]
 
 jobs:
   sms:
@@ -17,4 +17,4 @@ jobs:
     - name: curl
       uses: wei/curl@master
       with:
-        args: https://api.46elks.com/a1/sms -u ${{secrets.ELKS_API_USERNAME}}:${{secrets.ELKS_API_PASSWORD}} -d from=VolvoCI -d to=${{secrets.PULL_REQUEST_PHONE_NUMBERS}} -d message='There is a new pull request!'
+        args: https://api.46elks.com/a1/sms -u ${{secrets.ELKS_API_USERNAME}}:${{secrets.ELKS_API_PASSWORD}} -d from=Volvo -d to=${{secrets.PULL_REQUEST_PHONE_NUMBERS}} -d message='There is a new $GITHUB_EVENT_NAME in $GITHUB_REPOSITORY with hash $GITHUB_SHA!'
