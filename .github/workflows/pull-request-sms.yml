@@ -17,4 +17,4 @@ jobs:
     - name: curl
       uses: wei/curl@v1
       with:
-        args: https://api.46elks.com/a1/sms -u ${{secrets.46ELKS_API_USERNAME}}:${{secrets.46ELKS_API_PASSWORD}} -d from=AWS-Training -d to=+46760589799 -d message="There's a new pull request!"
+        args: https://api.46elks.com/a1/sms -u ${{secrets.ELKS_API_USERNAME}}:${{secrets.ELKS_API_PASSWORD}} -d from=AWS-Training -d to=+46760589799 -d message="There's a new pull request!"
