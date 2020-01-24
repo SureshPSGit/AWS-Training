@@ -17,4 +17,4 @@ jobs:
     - name: curl
       uses: wei/curl@master
       with:
-        args: https://api.46elks.com/a1/sms -u ${{secrets.ELKS_API_USERNAME}}:${{secrets.ELKS_API_PASSWORD}} -d from=Volvo -d to=${{secrets.PHONE_NUMBERS}} -d message='There is a new ${{GITHUB_EVENT_NAME}} in ${{GITHUB_REPOSITORY}} with hash ${{GITHUB_SHA}}!'
+        args: https://api.46elks.com/a1/sms -u ${{secrets.ELKS_API_USERNAME}}:${{secrets.ELKS_API_PASSWORD}} -d from=Volvo -d to=${{secrets.PHONE_NUMBERS}} -d message='There is a new ${{github.event_name}} in ${{github.repository}} with hash ${{github.sha}}!'
