@@ -38,7 +38,3 @@ stages:
        command:push
         tags:|
          $(tag)
-
-         
-           
-             
