@@ -14,7 +14,7 @@ variables:
   repository: suresh2203
 
 stages:
-- stage: Build and Push 
+- stage: Build-and-Push 
   displayName: Build image
   jobs:  
   - job: Build
