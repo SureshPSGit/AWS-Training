@@ -5,8 +5,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
 WORKDIR /src
-COPY AWS-Training/AWS-Training.csproj AWS-Training/
-RUN dotnet restore "AWS-Training/AWS-Training.csproj"
+COPY /AWS-Training.csproj AWS-Training/
+RUN dotnet restore "/AWS-Training.csproj"
 COPY . .
 WORKDIR "/src/AWS-Training/"
 RUN dotnet build "AWS-Training.csproj" -c Release -o /app/build
