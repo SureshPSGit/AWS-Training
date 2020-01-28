@@ -26,6 +26,6 @@ stages:
       inputs:
         repository: $(imageName)
         command: build
-        dockerfile: '**/AWS-Training/Dockerfile'
+        dockerfile: '/AWS-Training/Dockerfile'
         tags: |
           $(tag)
