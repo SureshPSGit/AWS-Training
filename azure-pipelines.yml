@@ -26,6 +26,6 @@ stages:
       inputs:
         repository: $(imageName)
         command: build
-        dockerfile: '../Dockerfile'
+        dockerfile: '. --file **/Dockerfile'
         tags: |
           $(tag)
