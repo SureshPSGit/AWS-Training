@@ -32,6 +32,12 @@ stages:
          $(tag)
 
     - task: Docker@2
+      displayName: Login to docker hub
+      inputs:
+          containerRegistry: 'Docker Hub'
+          command: 'login'
+
+    - task: Docker@2
       displayName: Push an image
       inputs:
        containerRegistry: 'Docker Hub'
