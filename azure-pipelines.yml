@@ -34,5 +34,6 @@ stages:
       displayName: Push an image
       inputs:
        containerRegistry: 'Docker Hub'
+       repository: $(imageName)
        command: push
       
