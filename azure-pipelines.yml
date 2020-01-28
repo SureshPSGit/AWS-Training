@@ -10,8 +10,8 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-  imageName: aws_training
-  repository: suresh2203
+  imageName: 'aws_training'
+  repository: 'suresh2203'
 
 stages:
 - stage: Build
@@ -35,6 +35,4 @@ stages:
       inputs:
        containerRegistry: 'Docker Hub'
        repository: $(repository)
-       command:push
-        tags:|
-         $(tag)
+       command: push
