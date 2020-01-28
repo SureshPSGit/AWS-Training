@@ -27,5 +27,6 @@ stages:
         repository: $(imageName)
         command: build
         dockerfile: '/AWS-Training/Dockerfile'
+        arguments: '. --file'
         tags: |
           $(tag)
