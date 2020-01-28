@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        command: build . --file
-        dockerfile: '$(Build.SourcesDirectory)/AWS-Training/Dockerfile'
+        command: build
+        dockerfile: '/AWS-Training/Dockerfile'
         tags: |
           $(tag)
