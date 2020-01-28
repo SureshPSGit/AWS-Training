@@ -10,7 +10,8 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-  imageName: registry.hub.docker.com/aws_training
+  imageName: aws_training
+  registry: registry.hub.docker.com
 
 stages:
 - stage: Build_and_Push 
@@ -34,6 +35,6 @@ stages:
       displayName: Push an image
       inputs:
        containerRegistry: 'Docker Hub'
-       repository: $(imageName)
+       repository: $(registry)
        command: push
       
