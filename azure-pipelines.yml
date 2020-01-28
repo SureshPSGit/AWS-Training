@@ -41,7 +41,7 @@ stages:
       displayName: Push image
       inputs:
        containerRegistry: 'Docker Hub'
-       repository: $(repository)
+       repository: $(imageName)
        command: push
        tags: |
         $(tag)
