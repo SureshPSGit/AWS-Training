@@ -27,6 +27,5 @@ stages:
         repository: $(imageName)
         command: build
         dockerfile: '**/Dockerfile'
-        arguments: .
         tags: |
           $(tag)
