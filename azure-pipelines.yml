@@ -43,3 +43,5 @@ stages:
        containerRegistry: 'Docker Hub'
        repository: $(repository)
        command: push
+       tags: |
+        $(tag)
