@@ -10,8 +10,8 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-  imageName: suresh2203/aws_training
-  registry: registry.hub.docker.com/suresh2203/aws_training
+  imageName: $(imageName)
+  registry: $(registry)
 
 stages:
 - stage: Build_and_Push 
