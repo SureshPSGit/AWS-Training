@@ -6,7 +6,7 @@
 # https://github.com/actions/labeler/blob/master/README.md
 
 name: Push Request SMS
-on: [push]
+on: []
 
 jobs:
   sms:

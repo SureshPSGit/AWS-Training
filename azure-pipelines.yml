@@ -13,19 +13,27 @@ variables:
   imageName: suresh2203/aws_training
  
 stages:
-- stage: Build
+- stage: Build_and_Push 
   displayName: Build image
   jobs:  
-  - job: Build
-    displayName: Build
+  - job: Build_Push
+    displayName: Build and push docker image to docker hub
     pool:
       vmImage: 'ubuntu-latest'
     steps:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        repository: $(imageName)
+        repository: $(registry)
         command: build
         dockerfile: '**/Dockerfile'
         tags: |
-          $(tag)
+         $(tag)
+
+    - task: Docker@2
+      displayName: Push an image
+      inputs:
+       containerRegistry: 'Docker Hub'
+       repository: $(imageName)
+       command: push
+      
