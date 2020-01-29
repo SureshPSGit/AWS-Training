@@ -10,8 +10,6 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-  imageName: $(imageName)
-  registry: $(registry)
 
 stages:
 - stage: Build_and_Push 
