@@ -10,7 +10,8 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-
+  imageName: suresh2203/aws_training
+ 
 stages:
 - stage: Build_and_Push 
   displayName: Build image
