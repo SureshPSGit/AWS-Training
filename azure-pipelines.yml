@@ -10,7 +10,7 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-  imageName: aws_training
+  imageName: suresh2203/aws_training
   registry: registry.hub.docker.com/aws_training
 
 stages:
