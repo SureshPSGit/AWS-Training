@@ -3,7 +3,7 @@
 jobs:
  build: 
   docker:
-  #executor: my-ubuntu-exec
+  executor: docker
  
   steps:
    - checkout
