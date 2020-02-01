@@ -11,5 +11,5 @@ jobs:
    - checkout
    - setup_remote_docker
    - run: |
-     docker build Dockerfile -t $imageName .
+     docker build Dockerfile
    
