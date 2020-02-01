@@ -5,7 +5,6 @@ jobs:
   executor: my-ubuntu-exec
  
   steps:
-   - name : Build the docker image
    - checkout
    - run : docker build . --file Dockerfile --tag $imageName:$build_num
    
