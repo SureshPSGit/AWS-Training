@@ -2,7 +2,7 @@
 version: 2.1
 jobs:
  build: 
-  runs-on: ubuntu-latest
+  executor: my-ubuntu-exec
  
   steps:
    - name : Build the docker image
