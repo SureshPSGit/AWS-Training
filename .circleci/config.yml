@@ -7,5 +7,6 @@ jobs:
  
   steps:
    - checkout
-   - run : docker build . --file Dockerfile --tag $imageName:$build_num
+   - setup_remote_docker
+   - run : docker build . --file Dockerfile --tag $imageName:$CIRCLE_BUILD_NUM
    
