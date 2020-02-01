@@ -4,7 +4,9 @@ jobs:
  build: 
   docker:
   - image: buildpack-deps:trusty 
- 
+  environment:
+    imageName:suresh2203/aws_training
+    
   steps:
    - checkout
    - setup_remote_docker
