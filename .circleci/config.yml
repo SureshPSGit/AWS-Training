@@ -3,7 +3,7 @@
 jobs:
  build: 
   docker:
-  executor: docker
+  - image: buildpack-deps:trusty 
  
   steps:
    - checkout
