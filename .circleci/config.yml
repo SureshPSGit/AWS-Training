@@ -9,5 +9,5 @@ jobs:
    - checkout
    - setup_remote_docker
    - run: |
-     docker build -t $imageName:$CIRCLE_BUILD_NUM Dockerfile
+     docker build Dockerfile -t $imageName:$CIRCLE_BUILD_NUM .
    
