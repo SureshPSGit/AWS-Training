@@ -14,7 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: curl
-      uses: wei/curl@master
+    - name: Send SMS action step
+      uses: 46elks/gh-actions-sms@v1.0.0
+      id: sms
       with:
-        args: https://api.46elks.com/a1/sms -u ${{secrets.ELKS_API_USERNAME}}:${{secrets.ELKS_API_PASSWORD}} -d from=Volvo -d to=${{secrets.PHONE_NUMBERS}} -d message='There is a new ${{github.event_name}} in ${{github.repository}} with hash ${{github.sha}}!'
+        apiUsername: ${{ secrets.ELKS_API_USERNAME }}
+        apiPassword: ${{ secrets.ELKS_API_PASSWORD }}
+        from: 'Volvo'
+        to: ${{secrets.PHONE_NUMBERS}}
+        message: 'There is a new ${{github.event_name}} in ${{github.repository}} with hash ${{github.sha}}!'
